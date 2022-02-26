@@ -1,8 +1,5 @@
 // build reaction.js model
-// build thought.js model
-// build user.js model
-    // import thought.js file for thoughts reference
-    // 
+    // getter method to format the timestamp on query
     // 
     // 
 // import all 3 models into index.js file in models folder
