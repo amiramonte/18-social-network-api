@@ -4,6 +4,34 @@ const {User, Thought} = require('../../models');
 // the `api/thoughts` endpoint
 
 
+// GET route for all thoughts
+router.get('/', async (req, res) => {
+    try {
+        const allThoughts = await Thought.find();
+
+        res.status(200).json(allThoughts);
+
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
+
+
+// GET route for single thought by id
+router.get('/singlethought/:id', async (req, res) => {
+    try {
+        const singlethought = await Thought.findOne({_id:req.params.id})
+
+        res.status(200).json(singlethought);
+
+    } catch (error) {
+        res.status(400).json(error);
+        console.log(error)
+    }
+});
+
+
+
 // POST route for creation of new thought
 router.post('/create', async (req, res) => {
     try {

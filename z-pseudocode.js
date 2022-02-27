@@ -9,7 +9,6 @@
     // 
 // 
 // API/THOUGHTS ROUTES
-    // POST route to create new thought = READ README
     // GET route for all thoughts
     // GET route for single thought by its _id
     // PUT route to update thought by its _id
