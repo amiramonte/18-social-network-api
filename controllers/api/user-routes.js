@@ -19,14 +19,15 @@ router.get('/', async (req, res) => {
 
 
 // GET route for single user by id
-router.get('/:id', async (req, res) => {
+router.get('/singleuser/:id', async (req, res) => {
     try {
-        const singleUser = await User.findOne({_id:req.params.id});
+        const singleUser = await User.findOne({_id:req.params.id}).populate('thoughts').populate('friends');
 
         res.status(200).json(singleUser);
 
     } catch (error) {
         res.status(400).json(error);
+        console.log(error)
     }
 });
 
@@ -46,6 +47,20 @@ router.post('/create', async (req, res) => {
 
 
 // PUT route to update a user by its _id
+router.put('/update/:id', async (req, res) => {
+    try {
+        const foundUser = await User.findOneAndUpdate(
+            {_id:req.params.id},
+            {$set: req.body},
+            {new:true}
+            )
+
+        res.status(200).json(foundUser);
+
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
 
 
 
