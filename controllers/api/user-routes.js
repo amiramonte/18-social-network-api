@@ -63,8 +63,20 @@ router.put('/update/:id', async (req, res) => {
 });
 
 
-
 // DELETE route to delete user by its _id
+router.delete('/delete/:id', async (req, res) => {
+    try {
+        const deleteUser = await User.findOneAndDelete(
+            {_id:req.params.id},
+            {new:true}
+            );
+
+        res.status(200).json(deleteUser);
+
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
 
 
 

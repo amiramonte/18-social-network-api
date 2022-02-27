@@ -3,21 +3,19 @@
 
 
 // API/USER ROUTES
-    // Get route for single user by its _id and populated thought and friend data
-    // Put route to update a user by its _id
-    // Delete route to delete a user by its _id
-    // 
-    // 
-    // 
+    // remove a user's associated thoughts when deleted 
+    // POST route to add a new friend to user's friend list
+    // DELETE route to remove a friend from a user's friend list
     // 
 // 
 // API/THOUGHTS ROUTES
+    // POST route to create new thought = READ README
+    // GET route for all thoughts
+    // GET route for single thought by its _id
+    // PUT route to update thought by its _id
+    // DELETE route to delete a thought by its _id
     // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
+    // POST ROUTE to create a reaction stored in a single thought's reactions array field
+    // DELETE route to pull and remove a reaction by the reaction's reactionId value
 // 
 // 
