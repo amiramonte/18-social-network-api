@@ -71,6 +71,20 @@ router.put('/update/:id', async (req, res) => {
 
 
 
+// DELETE route to delete thought by its _id
+router.delete('/delete/:id', async (req, res) => {
+    try {
+        const deleteThought = await Thought.findOneAndDelete(
+            {_id:req.params.id},
+            {new:true}
+            );
+
+        res.status(200).json(deleteThought);
+
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
 
 
 
