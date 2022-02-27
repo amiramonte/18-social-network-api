@@ -3,7 +3,6 @@
 
 
 // API/USER ROUTES
-    // Post route to create a new user
     // Get route for all users
     // Get route for single user by its _id and populated thought and friend data
     // Put route to update a user by its _id

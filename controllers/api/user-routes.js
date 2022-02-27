@@ -6,10 +6,38 @@ const {User, Thought} = require('../../models');
 
 
 // GET route for all users = '/'
+router.get('/', async (req, res) => {
+    try {
+        const allUsers = await User.find();
+
+        res.status(200).json(allUsers);
+        console.log(allUsers);
+
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
+
 
 // GET route for single user by id = '/:id'
+router.get('/:id', async (req, res) => {
+    try {
+        const singleUser = await User.findOne();
 
-// POST route for new user
+        res.status(200).json(singleUser);
+        console.log(singleUser);
+
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
+
+
+
+
+
+
+// POST route for creation of new user
 router.post('/create', async (req, res) => {
     try {
         const newUser = await User.create(req.body);
@@ -20,7 +48,7 @@ router.post('/create', async (req, res) => {
     } catch (error) {
         res.status(400).json(error);
     }
-})
+});
 
 
 
