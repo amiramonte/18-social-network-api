@@ -52,4 +52,29 @@ router.post('/create', async (req, res) => {
 });
 
 
+
+// PUT route to update a thought by its _id
+router.put('/update/:id', async (req, res) => {
+    try {
+        const foundThought = await Thought.findOneAndUpdate(
+            {_id:req.params.id},
+            {$set: req.body},
+            {new:true}
+            )
+
+        res.status(200).json(foundThought);
+
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
+
+
+
+
+
+
+
+
+
 module.exports = router; 
