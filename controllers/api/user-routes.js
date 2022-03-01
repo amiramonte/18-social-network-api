@@ -79,7 +79,38 @@ router.delete('/delete/:id', async (req, res) => {
 });
 
 
+// POST route to add new friend to a user's friend list
+router.post('/:userId/friends/:friendId', async(req, res) => {
+    try {
+        const addFriend = await User.findOneAndUpdate(
+            {_id:req.params.userId},
+            {$addToSet: {friends: req.params.friendId}},
+            {new:true}
+            )
 
+            res.status(200).json(addFriend);
+
+    } catch (error) {
+        res.status(400).json(error);
+    }
+})
+
+
+// DELETE route to remove friend from a user's friend list
+router.delete('/:userId/friends/:friendId', async(req, res) => {
+    try {
+        const deleteFriend = await User.findOneAndUpdate(
+            {_id:req.params.userId},
+            {$pull: {friends: req.params.friendId}},
+            {new:true}
+            )
+
+            res.status(200).json(deleteFriend);
+
+    } catch (error) {
+        res.status(400).json(error);
+    }
+})
 
 
 module.exports = router; 
