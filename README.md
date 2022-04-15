@@ -4,10 +4,11 @@
 ## Table of contents
 
 - [Description](#description)
-- [Technologies](#technologies)
 - [Functionality](#functionality)
-- [Deployment](#deployment)
+- [Technologies](#technologies)
+- [Installation](#installation)
 - [Credits](#credits)
+
 
 ---
 
@@ -21,18 +22,6 @@ This project was built to help reinforce the following skills:
 - MongoDB
 - Mongoose
 
----
-
-
-## Technologies
-
-Project is created with:
-
-- [JavaScript](https://www.javascript.com/)
-- [Node.js](https://nodejs.org/)
-- [Express.js](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Mongoose ODM](https://mongoosejs.com/)
 
 ---
 
@@ -46,6 +35,20 @@ The following links show video demonstrating the functionality of application's 
 
 
 [Video demonstrating all Thought related API routes being tested in Insomnia](https://drive.google.com/file/d/1NCBcctbn2PSkkNaiE2ufoZh1RyW8ZPEo/view)
+
+
+---
+
+
+## Technologies
+
+Project is created with:
+
+- [JavaScript](https://www.javascript.com/)
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose ODM](https://mongoosejs.com/)
 
 
 ---
