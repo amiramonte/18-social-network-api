@@ -54,15 +54,14 @@ Project is created with:
 ---
 
 
-## Deployment
+## Installation
 
-- Copy the repository from Github
-- Navigate to the folder you would like to store this repo in on your local machine
-- git clone the repo into your preferred folder
-- open the repo in your preferred source code editor 
-- In your terminal or command line interface, type `npm i`
-- Once the appropriate packages have downloaded, initialize the program by navigating to your terminal and typing in `node server.js`
-- Once you receive a response that the server is operational in your terminal or command line interface, you can interact with the constructed API routes locally via Insomnia, Postman or your preferred browser
+1. Clone the repository from Github down to your local machine
+2. Open the repo in your preferred source code editor 
+3. Navigate to your command line interface and enter `npm i` to install all dependencies
+4. Once the dependencies have installed, initialize the program by navigating to the command line interface and entering in `node server.js`
+5. Once you receive a response that the server is operational in your command line interface, you can interact with the constructed API routes locally via Insomnia, Postman or your preferred browser
+6. All constructed API routes can be found in `controllers Folder -> api Folder -> user-routes.js file and thought-routes.js file`
 
 
 ---
