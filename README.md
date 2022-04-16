@@ -15,12 +15,7 @@
 
 ## Description
 
-This project was built to help reinforce the following skills:
-
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
+This Social Network API was designed to build out a back end server and back end API routes using MongoDB and Mongoose ODM.
 
 
 ---
